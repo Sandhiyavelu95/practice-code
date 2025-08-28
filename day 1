@@ -1,0 +1,139 @@
+Problem 1
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner kbd=new Scanner(System.in);
+	    int n=kbd.nextInt();
+        for(int row=1;row<=n;row++){
+            for(int col=1;col<=n-row;col++)
+            System.out.print(" ");
+            for(int col=1;col<=2*row-1;col++)
+            System.out.print("*");
+            System.out.println();
+        }
+        for(int row=n-1;row>=1;row--){
+            for(int col=1;col<=n-row;col++)
+            System.out.print(" ");
+            for(int col=1;col<=2*row-1;col++)
+            System.out.print("*");
+            System.out.println();
+        }
+    }
+} 
+Problem 2
+import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            Scanner scan =new Scanner(System.in);
+            int n = scan.nextInt();
+            for(int row=1;row<=n;row++)
+            {
+                for(int col=1;col<=row;col++)
+                System.out.print("*");
+                for(int col=1;col<=2*(n-row);col++)
+                System.out.print(" ");
+                for(int col=1;col<=row;col++)
+                System.out.print("*");
+                System.out.println();
+            }
+            for(int row=n-1;row>=1;row--)
+            {
+                for(int col=1;col<=row;col++)
+                System.out.print("*");
+                for(int col=1;col<=2*(n-row);col++)
+                System.out.print(" ");
+                for(int col=1;col<=row;col++)
+                System.out.print("*");
+                System.out.println();
+            }
+        }
+    }
+Problem 3
+    import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            Scanner scan =new Scanner(System.in);
+            int n = scan.nextInt();
+            for(int row=1;row<=n;row++){
+                for(int col=0;col<=n;col++){
+                if(row==1||col==1||row==n||col==n)
+                System.out.print("*");
+                else
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+        }
+    }
+Problem 4
+    import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            Scanner scan =new Scanner(System.in);
+            int n = scan.nextInt();
+            int count=0;
+            while(n!=0)
+            {
+                n=n/10;
+                count++;
+                System.out.println(count);
+            }
+            
+            }
+    }
+Problem 5
+//display number in reverse order//
+import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            Scanner scan =new Scanner(System.in);
+            int n = scan.nextInt();
+            int dig=0;
+            while(n>0)
+            {
+                dig=n%10;
+                System.out.println(dig+" ");
+                n=n/10;
+            }
+            
+            }
+    }
+Problem 6
+    //display the number in forward order//
+    import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            Scanner scan =new Scanner(System.in);
+            int n = scan.nextInt();
+            int temp=n;
+            int count=0;
+            while(n>0)
+            {
+                n=n/10;
+                count++;
+            }
+            int div=(int)Math.pow(10,count-1);
+            //System.out.println(div);
+            while(div>0){
+            int dig=(temp/div)%10;
+            System.out.println(dig+" ");
+            div=div/10;
+            }
+        }
+    } 
