@@ -1,1 +1,128 @@
+Problem 1:
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner kbd=new Scanner(System.in);
+	    int n=kbd.nextInt();
+	    int day=n;
+	    switch(day)
+	    {
+	        case 1:System.out.print("Sunday");break;
+	        case 2:System.out.print("Monday");break;
+	        case 3:System.out.print("Tuesday");break;
+	        case 4:System.out.print("Wednesday");break;
+	        case 5:System.out.print("Thursday");break;
+	        case 6:System.out.print("Friday");break;
+	        default:System.out.print("Saturday");break;
+	    }
+	}
+}
 
+Problem 2:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner kbd=new Scanner(System.in);
+	    int n=kbd.nextInt();
+        System.out.print("Even numbers:");
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+        System.out.print("Odd numbers:");
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+Problem 3:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+         System.out.println();
+        for(int i=1;i<=n;i++)
+        if(i%3==0 && i%4==0)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+Problem 4:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int n=5;
+        Scanner scanner = new Scanner(System.in);
+        String ch = scanner.next();
+
+        for (int i = 1; i <= n;i++){ 
+            for (int j = 1; j <= i;j++) { 
+                System.out.print(j);
+                
+            }
+            System.out.println();
+    
+        }
+}
+}
+
+Problem 5:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        for(int i=1;i<=16;i++){
+            
+            for(int j=1;j<=16;j++)
+            System.out.print(i*j+"\t");
+            System.out.println();
+        }
+
+    }
+}
+
+Problem 6:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        for(int i=0;i<10;i++){
+            for(int j=0;j<10;j++){
+                for(int k=0;k<10;k++){
+                System.out.println(i+" "+j+" "+k);
+                }
+            }
+        }
+    }
+}
+
+Problem 7:
+//Finding the neon number
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int squ = n*n;
+        int sum=0;
+        while(squ>0)
+        {
+            int dig = squ%10;
+             sum = sum+dig;
+             squ = squ/10;
+        }
+        if(sum==n)
+        {
+            System.out.print("neon num");
+        }
+        else
+        {
+           System.out.print(" not neon num"); 
+        }
+    }
+}
