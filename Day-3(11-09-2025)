@@ -1,0 +1,202 @@
+Problem 1:
+//min of array
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int size = scan.nextInt();
+int arr[]=new int[size];
+for(int i=0;i>size;i++)
+arr[i]=scan.nextInt();
+int min = arr[0];
+for(int i=1;i<size;i++)
+if(min>arr[i]){
+min=arr[i];}
+System.out.print("MIN "+min);
+}
+}
+
+Problem 2:
+//max of array
+
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int size = scan.nextInt();
+int arr[]=new int[size];
+for(int i=0;i>size;i++)
+arr[i]=scan.nextInt();
+int max = arr[0];
+for(int i=1;i<size;i++)
+if(max<arr[i]){
+max=arr[i];}
+System.out.print("MAX "+max);
+}
+}
+
+Problem 3:
+//searching an array
+
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int size = scan.nextInt();
+int arr[]=new int[size];
+for(int i=0;i>size;i++)
+arr[i]=scan.nextInt();
+int search = scan.nextInt();
+Boolean find=false;
+int i;
+for(i=0;i<size;i++)
+{
+if(arr[i]==search){
+find=true;
+break;
+}
+}
+if(find)
+{
+System.out.println(i);
+}
+else
+{
+System.out.println("-1");
+}
+}
+}
+
+Problem 4:
+ //METHOD WITH PARAMETER WITHOUT RETURN TYPE
+
+import java.util.Scanner;
+public class method{
+static void add(int a,int b)
+{
+System.out.print(a+b);
+}
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int n1=scan.nextInt();
+int n2=scan.nextInt();
+add(n1,n2);
+}
+}
+
+Problem 5:
+ //METHOD WITH PARAMETER WITHOUT RETURN TYPE(no static)
+
+import java.util.Scanner;
+public class method{
+void add(int a,int b)
+{
+System.out.print(a+b);
+}
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int n1=scan.nextInt();
+int n2=scan.nextInt();
+method obj=new mwthod();
+obj.add(n1,n2);
+}
+}
+
+Problem 6:
+import java.util.Scanner;
+public class method{
+static int add(int a,int b)
+{
+return a+b;
+}
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+int n1=scan.nextInt();
+int n2=scan.nextInt();
+int a=add(n1,n2);
+System.out.print(a);
+}
+}
+
+Problem 7:
+  //METHOD WITHOUT PARAMETER AND WITHOUT RETURN TYPE
+import jav. util.Scanner;
+public class method{
+static void add(){
+Scanner scan = new Scanner(System.in);
+int n1=scan.nextInt();
+int n2=scan.nextInt();
+System.out.print(n1+n2);
+}
+public static void main(String[] args){
+add();}}
+
+Problem 8:
+  //METHOD WITHOUT PARAMETER AND WITH RTURN TYPE
+import java.util.Scanner;
+public class method{
+static int add(){
+Scanner scan = new Scanner(System.in);
+int n1=scan.nextInt();
+int n2=scan.nextInt();
+return(n1+n2);
+}
+public static void main(String[] args){
+System.out.print(add());
+}
+}
+
+Problem 9:
+ // count the array element lessthan key element
+
+import java.util.Scanner;
+public class  Main{
+public static void main(String[] args){
+Scanner scan = new Scanner(System.in)
+int size = scan.nextInt();
+int arr[]=new int[size];
+for(int i=0;i>size;i++)
+arr[i]=scan.nextInt();
+int key=scan.nextInt();
+int count=0;
+for(int i=0;i<size;i++)
+{
+if(arr[i]<key)
+count++;
+System.out.print(count);
+}
+}
+
+Problem 10:
+ // count the array element lessthan key element using method
+import java.util.Scanner;
+class method{
+static void count(int m,int a[])
+int count=0,s=a.length;
+for(int i=0;i<s;i++)
+{
+if(a[i]<m)
+count++;
+}
+public static void main(String[] args){
+Scanner scan = new Scanner(System.in);
+int size = scan.nextInt();
+int arr[]=new int[size];
+for(int i=0;i<size;i++)
+arr[i]=scan.nextInt();
+int mark= scan.nextInt();
+ count(mark,arr);
+}
+}
+
+  
+
+
+
+
