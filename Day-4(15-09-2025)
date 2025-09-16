@@ -1,0 +1,146 @@
+
+Problem 1:
+//insertion of array
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size +1];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int pos = scan.nextInt();
+        int element = scan.nextInt();
+        for(int i=0;i>pos-1;i--)
+        arr[i+1]=arr[i];
+        arr[pos-1]=element;
+        System.out.print(Arrays.toString(arr));
+    }
+}
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size+1];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int pos = scan.nextInt();
+        int element = scan.nextInt();
+        for(int i=size-1;i>=pos-1;i++)
+        arr[i+1]=arr[i];
+        arr[pos-1]=element;
+        System.out.print(Arrays.toString(arr));
+    }
+}
+
+Problem 2:
+    //deletion of array
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int ind = scan.nextInt();
+        for(int i=ind;i<size-1;i++)
+        arr[i]=arr[i+1];
+       for(int i=0;i<size-1;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
+
+Problem 3:
+  //left rotation opf array
+
+ import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int leftrot =scan.nextInt();
+        for(int j=1;j<=leftrot;j++)
+        {
+            int temp=arr[0];
+            for( int i=0;i<size-1;i++)
+            {
+                arr[i]=arr[i+1];
+            }
+            arr[size-1]=temp;
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+}
+
+Problem 4:
+  //right rotation of array
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int rightrot =scan.nextInt();
+        for(int j=1;j<=rightrot;j++)
+        {
+            int temp=arr[size-1];
+            for( int i=size-1;i>0;i--)
+            {
+                arr[i]=arr[i-1];
+            }
+            arr[0]=temp;
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+}
+
+Problem 5:
+  //reverse of array(swap of two numbers)
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int i=arr[0],j=arr[size-1];
+        while(i<j)
+        {
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+}
+        
+
+
+
