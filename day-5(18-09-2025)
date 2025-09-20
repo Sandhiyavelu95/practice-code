@@ -1,0 +1,125 @@
+Problem 1:
+//factorial
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int num1 = scan.nextInt(); 
+        System.out.print(fact(num1));
+    }
+    static int fact(int n){
+        if(n==0||n==1)
+        return 1;
+        return(n*(fact(n-1)));
+    }
+    }
+
+Problem 2:
+  //fiboseries  
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int num1 = scan.nextInt(); 
+        for(int i=0;i<num1;i++)
+        System.out.print(fibo(i));
+    }
+    static int fibo(int n){
+        if(n==0||n==1)
+        return n;
+        return fibo(n-1)+fibo(n-2);
+    }
+}
+
+Problem 3:
+//time measurement
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int num1 = scan.nextInt(); 
+        long startTime = System.nanoTime();
+        for(int i=0;i<num1;i++)
+        System.out.print(fibo(i));
+        long endTime=System.nanoTime();
+         System.out.print(endTime-startTime+"ms");
+    }
+    static int fibo(int n){
+        if(n==0||n==1)
+        return n;
+        return fibo(n-1)+fibo(n-2);
+    }
+}
+
+Problem 4:
+  //bottom up approach
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int num1 = scan.nextInt(); 
+        int fibo[]=new int[num1];
+        fibo[0]=0;
+        fibo[1]=1;
+        long startTime = System.nanoTime();
+        for(int i=2;i<num1;i++){
+            fibo[i]=fibo[i-1]+fibo[i-2];
+        System.out.print(fibo[i]);
+        }
+        long endTime=System.nanoTime();
+         System.out.print(endTime-startTime+"ms");
+    }
+}
+
+Problem 5:
+ //count even & odd using method
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt(); 
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        evenOddCount(arr);
+    }
+    static void evenOddCount(int [] a){
+     int len=a.length;
+     int EvenC =0,OddC=0;
+     for(int i=0;i<len;i++)
+     {
+        if(a[i]%2==0)
+        EvenC++;
+        else
+        OddC++;
+     }
+     System.out.println("Even "+EvenC+"\nOddC "+OddC);
+    }
+}
+
+Problem 6:
+ //passing an array in paramater with return type
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner scan =new Scanner(System.in);
+        int size = scan.nextInt(); 
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++)
+        arr[i]=scan.nextInt();
+        int[] res=swapAdjPair(arr);
+        for(int x:res)
+        System.out.print(x+" ");
+    }
+    static int[] swapAdjPair(int[] a){
+        for(int i =0;i<a.length-1;i=i+2){
+            int temp=a[i];
+            a[i]=a[i+1];
+            a[i+1]=temp;
+        }
+        return a;
+    }
+}
+
+
+
