@@ -1,0 +1,148 @@
+//String
+//ways of getting and displaying string
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        char name[] ={'V','S','B'};
+        String na = new String(name);
+        System.out.println(na);
+    }
+}
+
+import java.util.Arrays;
+public class Main{
+    public  static void main(String[] args){
+        char name[] ={'V','S','B'};
+        String na = Arrays.toString(name);
+        System.out.println(na);
+    }
+}
+
+//length method
+public class Main{
+    public  static void main(String[] args){
+        String str="palcement";
+        char [] name ={'a','b'};
+        System.out.println(str.length());//in string, we need to give ()
+         System.out.println(name.length);//"array is a class" so, we don't give ()
+    }
+}
+
+//String is immutable
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String str=kbd.next(); //(or) new String(kbd.next());
+        String str1=kbd.next();
+        System.out.println(str.hashCode());
+        System.out.println(str1.hashCode());
+    }
+}
+
+//StringBuilder is mutable
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        StringBuilder name=new StringBuilder(kbd.next());
+        StringBuilder name1=new StringBuilder(kbd.next());
+        System.out.println(name.hashCode());
+        System.out.println(n1.hashCode());
+    }
+}
+
+//change Case (Lower& Upper)
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String str=kbd.next(); //(or) new String(kbd.next());
+        System.out.println(str.toLowerCase());
+        System.out.println(str.toUpperCase());
+    }
+}
+
+//comparasion
+
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String name=kbd.next(); //(or) new String(kbd.next());
+        String name1=kbd.next();
+        System.out.println(name.equals(name1));
+        System.out.println(name.equalsIgnoreCase(name1));
+    }
+}
+
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String name=kbd.next(); //(or) new String(kbd.next());
+        String name1=kbd.next();
+        System.out.println(name.equals(name1));
+        boolean res=name.equalsIgnoreCase(name1);//it returns the boolean value
+        System.out.println(res);
+    }
+}
+
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String name=kbd.next(); 
+        String name1=kbd.next();
+        System.out.println(name.compareTo(name1));
+    }
+}       
+ //convert integer to string
+ public class Main{
+public  static void main(String[] args){
+  int num=100;
+  String numStr=String.valueOf(num);
+   System.out.println(num);
+  }
+}
+
+//get the input from the user and count the volwel in the input
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String na=kbd.next();   
+        int count=0;
+        for(int i=0;i<na.length();i++)
+        {
+            if(na.charAt(i)=='a'||na.charAt(i)=='e'||na.charAt(i)=='i'||na.charAt(i)=='o'||na.charAt(i)=='u')
+            count++;
+        }
+        System.out.println(count);
+    }
+}
+
+import java.util.Scanner;
+public class Main{
+    public  static void main(String[] args){
+        Scanner kbd=new Scanner(System.in);
+        String n1=kbd.next(); 
+        int vol=0;
+        String n="AEIOUaeiou";
+        for(int i=0;i<n1.length();i++){
+            if(n.contains(n1.charAt(i)+""))
+            vol++;
+        }
+        System.out.println(vol);
+    }
+}
+
+
+        
+
+
+
+
+        
+
+
